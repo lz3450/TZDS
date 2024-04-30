@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     26288       2812       3336      32436 ../lpc_firmware/pinlock/output/pinlock.elf

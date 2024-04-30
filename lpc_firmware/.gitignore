@@ -1,0 +1,38 @@
+# SDK items
+SDK
+**/CMSIS
+**/LPC55S69
+**/drivers
+**/cmsis_drivers
+**/components
+**/utilities/**
+!**/utilities/fsl_debug_console_conf.h
+**/sdmmc
+**/usb
+**/fatfs
+**/mbedtls
+**/freertos
+**/Makefile
+**/script.jlink.template
+# compiler related items
+**/startup/*
+**/ld/*
+# tmp items
+**/.cache
+**/.dep
+**/.ir
+**/.obj
+**/.db
+**/output*
+**/script.jlink
+**/jlink.log
+**/download.log
+compile_commands.json
+**/*.bak
+# de
+**/.clang-format
+**/.clangd
+**/.vscode
+#
+!template/**
+template/.vscode/settings.json

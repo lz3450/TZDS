@@ -1,0 +1,1 @@
+../../led_blinky_s/board/peripherals.h

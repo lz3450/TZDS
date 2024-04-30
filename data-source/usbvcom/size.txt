@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     47036       1720      18488      67244 ../lpc_firmware/usbvcom/output/usbvcom.elf

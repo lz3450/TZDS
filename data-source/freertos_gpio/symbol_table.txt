@@ -1,0 +1,551 @@
+
+../lpc_firmware/freertos_gpio/output/freertos_gpio.elf:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00072000 l    d  .core1_code	00000000 .core1_code
+20033000 l    d  .noinit_rpmsg_sh_mem	00000000 .noinit_rpmsg_sh_mem
+00000000 l    d  .interrupts	00000000 .interrupts
+00000200 l    d  .text	00000000 .text
+00006d54 l    d  .ARM	00000000 .ARM
+00006d5c l    d  .init_array	00000000 .init_array
+00006d64 l    d  .fini_array	00000000 .fini_array
+20000000 l    d  .data	00000000 .data
+200009b8 l    d  .bss	00000000 .bss
+200033c0 l    d  .heap	00000000 .heap
+200037c0 l    d  .stack	00000000 .stack
+40100000 l    d  m_usb_bdt	00000000 m_usb_bdt
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_str_offsets	00000000 .debug_str_offsets
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_addr	00000000 .debug_addr
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .stab	00000000 .stab
+00000000 l    d  .stabstr	00000000 .stabstr
+00000000 l    df *ABS*	00000000 startup_LPC55S69_cm33_core0.S.o
+e000ed08 l       *ABS*	00000000 VTOR
+00000000 l    df *ABS*	00000000 crtstuff.c
+00006d3c l     O .text	00000000 __EH_FRAME_BEGIN__
+00000200 l     F .text	00000000 __do_global_dtors_aux
+200009b8 l       .bss	00000001 completed.1
+00006d64 l     O .fini_array	00000000 __do_global_dtors_aux_fini_array_entry
+00000224 l     F .text	00000000 frame_dummy
+200009bc l       .bss	00000018 object.0
+00006d60 l     O .init_array	00000000 __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000 crt0.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 system_LPC55S69_cm33_core0.c
+00000000 l    df *ABS*	00000000 fsl_common_arm.c
+00000a2e l     F .text	0000000c DelayLoop
+00000a30 l       .text	00000000 loop
+00000000 l    df *ABS*	00000000 fsl_clock.c
+00000bf8 l     F .text	0000000a POWER_DisablePD
+20000004 l     O .data	00000004 s_Ext_Clk_Freq
+200009d4 l     O .bss	00000004 s_Pll0_Freq
+00000f42 l     F .text	0000003e findPll0PreDiv
+00000f80 l     F .text	0000000a POWER_EnablePD
+00000f8a l     F .text	00000010 CLOCK_IsPLL0Locked
+00000000 l    df *ABS*	00000000 fsl_power.c
+0000114e l     F .text	000000e8 lowpower_set_dcdc_power_profile
+00001236 l     F .text	000000c2 lowpower_set_voltage_for_process
+000012f8 l     F .text	000000ae lowpower_get_part_process_corner
+000013a6 l     F .text	000001aa lowpower_set_system_voltage
+00000000 l    df *ABS*	00000000 fsl_gpio.c
+00001550 l     F .text	00000044 GPIO_EnablePortClock
+00006ae8 l     O .text	00000008 s_gpioClockName
+0000161e l     F .text	00000016 CLOCK_EnableClock
+00000000 l    df *ABS*	00000000 port.c
+20000008 l     O .data	00000004 ulCriticalNesting
+0000173a l     F .text	00000022 prvSetupFPU
+000017e6 l     F .text	00000034 prvTaskExitError
+00000000 l    df *ABS*	00000000 portasm.c
+00001890 l       .text	00000000 pxCurrentTCBConst2
+000018c0 l       .text	00000000 xVTORConst
+00001950 l       .text	00000000 pxCurrentTCBConst
+00001980 l       .text	00000000 svchandler_address_const
+00000000 l    df *ABS*	00000000 list.c
+00000000 l    df *ABS*	00000000 queue.c
+00001b94 l     F .text	00000040 prvInitialiseNewQueue
+00001bd4 l     F .text	000000ac prvUnlockQueue
+00001e56 l     F .text	0000002e prvIsQueueEmpty
+00001e16 l     F .text	00000040 prvCopyDataFromQueue
+00000000 l    df *ABS*	00000000 tasks.c
+0000205c l     F .text	000000fc prvInitialiseNewTask
+00002158 l     F .text	0000013e prvAddNewTaskToReadyList
+20000a38 l     O .bss	00000004 uxCurrentNumberOfTasks
+00002d56 l     F .text	00000092 prvInitialiseTaskLists
+20000a3c l     O .bss	00000004 xSchedulerRunning
+20000a1c l     O .bss	00000004 uxTaskNumber
+20000ac8 l     O .bss	00000004 uxTopReadyPriority
+20000a64 l     O .bss	00000064 pxReadyTasksLists
+20000a20 l     O .bss	00000014 xTasksWaitingTermination
+20000a34 l     O .bss	00000004 uxDeletedTasksWaitingCleanUp
+00002296 l     F .text	0000003c prvResetNextTaskUnblockTime
+000022d2 l     F .text	00000018 prvDeleteTCB
+20000a40 l     O .bss	00000004 uxSchedulerSuspended
+20000a48 l     O .bss	00000004 pxDelayedTaskList
+20000ae8 l     O .bss	00000004 xNextTaskUnblockTime
+20000a44 l     O .bss	00000004 xTickCount
+000022fa l     F .text	000000f6 prvAddCurrentTaskToDelayedList
+20000a50 l     O .bss	00000014 xSuspendedTaskList
+20000a4c l     O .bss	00000004 pxOverflowDelayedTaskList
+20000ad0 l     O .bss	00000014 xPendingReadyList
+20000acc l     O .bss	00000004 xYieldPending
+20000aec l     O .bss	00000004 xPendedTicks
+20000ae4 l     O .bss	00000004 xIdleTaskHandle
+000027b0 l     F .text	00000024 prvIdleTask
+00002de8 l     F .text	0000005a prvCheckTasksWaitingTermination
+20000af0 l     O .bss	00000004 xNumOfOverflows
+20000af4 l     O .bss	00000014 xDelayedTaskList1
+20000b08 l     O .bss	00000014 xDelayedTaskList2
+00000000 l    df *ABS*	00000000 timers.c
+00002ea2 l     F .text	0000008e prvCheckForValidListAndQueue
+20000b1c l     O .bss	00000004 xTimerQueue
+20000b20 l     O .bss	00000004 xTimerTaskHandle
+00002f30 l     F .text	0000001a prvTimerTask
+20000b30 l     O .bss	00000014 xActiveTimerList1
+20000b44 l     O .bss	00000014 xActiveTimerList2
+20000b24 l     O .bss	00000004 pxCurrentTimerList
+20000b28 l     O .bss	00000004 pxOverflowTimerList
+00002f4a l     F .text	0000003a prvGetNextExpireTime
+00002f84 l     F .text	0000008c prvProcessTimerOrBlockTask
+00003010 l     F .text	0000015c prvProcessReceivedCommands
+0000316c l     F .text	00000044 prvSampleTimeNow
+000031b0 l     F .text	00000054 prvProcessExpiredTimer
+00003286 l     F .text	0000008a prvInsertTimerInActiveList
+0000324c l     F .text	0000003a prvReloadTimer
+20000b2c l     O .bss	00000004 prvSampleTimeNow.xLastTime
+00003204 l     F .text	00000048 prvSwitchTimerLists
+00000000 l    df *ABS*	00000000 heap_4.c
+20000b58 l     O .bss	00000004 pxEnd
+000034d0 l     F .text	0000008e prvHeapInit
+20000b5c l     O .bss	00000004 xFreeBytesRemaining
+20000b60 l     O .bss	00000008 xStart
+0000355e l     F .text	000000bc prvInsertBlockIntoFreeList
+20000b68 l     O .bss	00000004 xMinimumEverFreeBytesRemaining
+20000b6c l     O .bss	00000004 xNumberOfSuccessfulAllocations
+20000b74 l     O .bss	00002800 ucHeap
+20000b70 l     O .bss	00000004 xNumberOfSuccessfulFrees
+00000000 l    df *ABS*	00000000 clock_config.c
+0000378e l     F .text	0000000a POWER_DisablePD
+00000000 l    df *ABS*	00000000 peripherals.c
+00000000 l    df *ABS*	00000000 pin_mux.c
+00003864 l     F .text	00000016 CLOCK_EnableClock
+0000387a l     F .text	0000000a IOCON_PinMuxSet
+00000000 l    df *ABS*	00000000 main.c
+0000391c l     F .text	00000020 led_red_blink
+0000393c l     F .text	00000020 led_blue_blink
+0000395c l     F .text	0000001e led_green_blink
+0000397a l     F .text	0000000c GPIO_PortToggle
+00000000 l    df *ABS*	00000000 assert.c
+00000000 l    df *ABS*	00000000 exit.c
+00000000 l    df *ABS*	00000000 fiprintf.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 mlock.c
+00000000 l    df *ABS*	00000000 sbrkr.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+000040b4 l     F .text	00000074 __sprint_r.part.0
+00005024 l     F .text	00000080 __sbprintf
+00006bd0 l     O .text	00000010 blanks.1
+00006be0 l     O .text	00000010 zeroes.0
+00000000 l    df *ABS*	00000000 wcrtomb.c
+00000000 l    df *ABS*	00000000 wcsrtombs.c
+00000000 l    df *ABS*	00000000 wsetup.c
+00000000 l    df *ABS*	00000000 __call_atexit.c
+000051dc l     F .text	00000014 register_fini
+00000000 l    df *ABS*	00000000 abort.c
+00000000 l    df *ABS*	00000000 atexit.c
+00000000 l    df *ABS*	00000000 fflush.c
+00000000 l    df *ABS*	00000000 findfp.c
+00000000 l    df *ABS*	00000000 fini.c
+00000000 l    df *ABS*	00000000 fputwc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fvwrite.c
+00000000 l    df *ABS*	00000000 fwalk.c
+00000000 l    df *ABS*	00000000 locale.c
+00000000 l    df *ABS*	00000000 localeconv.c
+00000000 l    df *ABS*	00000000 lock.c
+00000000 l    df *ABS*	00000000 makebuf.c
+00000000 l    df *ABS*	00000000 mbtowc_r.c
+00000000 l    df *ABS*	00000000 memchr-stub.c
+00000000 l    df *ABS*	00000000 memmove.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 signal.c
+00000000 l    df *ABS*	00000000 signalr.c
+00000000 l    df *ABS*	00000000 stdio.c
+00000000 l    df *ABS*	00000000 strlen-stub.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 wbuf.c
+00000000 l    df *ABS*	00000000 wcsnrtombs.c
+00000000 l    df *ABS*	00000000 wctomb_r.c
+00000000 l    df *ABS*	00000000 writer.c
+00000000 l    df *ABS*	00000000 __atexit.c
+00000000 l    df *ABS*	00000000 closer.c
+00000000 l    df *ABS*	00000000 fclose.c
+00000000 l    df *ABS*	00000000 fstatr.c
+00000000 l    df *ABS*	00000000 isattyr.c
+00000000 l    df *ABS*	00000000 lseekr.c
+00000000 l    df *ABS*	00000000 readr.c
+00000000 l    df *ABS*	00000000 close.c
+00000000 l    df *ABS*	00000000 fstat.c
+00000000 l    df *ABS*	00000000 getpid.c
+00000000 l    df *ABS*	00000000 isatty.c
+00000000 l    df *ABS*	00000000 kill.c
+00000000 l    df *ABS*	00000000 lseek.c
+00000000 l    df *ABS*	00000000 read.c
+00000000 l    df *ABS*	00000000 sbrk.c
+200033bc l     O .bss	00000004 heap_end.0
+00000000 l    df *ABS*	00000000 write.c
+00000000 l    df *ABS*	00000000 _exit.c
+00000000 l    df *ABS*	00000000 impure.c
+20000010 l     O .data	00000428 impure_data
+00000000 l    df *ABS*	00000000 ctype_.c
+00000000 l    df *ABS*	00000000 crti.o
+00000000 l    df *ABS*	00000000 crtn.o
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 
+00006d68 l       .fini_array	00000000 __fini_array_end
+00006d64 l       .fini_array	00000000 __fini_array_start
+00006d64 l       .init_array	00000000 __init_array_end
+00006d5c l       .init_array	00000000 __preinit_array_end
+00006d5c l       .init_array	00000000 __init_array_start
+00006d5c l       .init_array	00000000 __preinit_array_start
+00000354  w    F .text	00000004 FLEXCOMM1_DriverIRQHandler
+00003798 g     F .text	00000002 BOARD_InitPeripherals_cm33_core0
+200033c0 g       .heap	00000000 __HeapBase
+000068e4 g     F .text	00000024 _isatty_r
+0000039c  w    F .text	00000004 SCT0_IRQHandler
+00006980 g     F .text	00000010 _getpid
+00000000 g       .interrupts	00000130 __Vectors
+00006908 g     F .text	0000002c _lseek_r
+00000354  w    F .text	00000004 DebugMon_Handler
+00000000 g       *ABS*	00000000 RPMSG_SHMEM_SIZE
+00000354  w    F .text	00000004 Reserved39_DriverIRQHandler
+20000000 g       .data	00000000 __data_start__
+000016b0 g     F .text	00000038 vPortExitCritical
+20033000 g       .noinit_rpmsg_sh_mem	00000000 __RPMSG_SH_MEM_END__
+00000800 g       *ABS*	00000000 STACK_SIZE
+00006398 g     F .text	0000002c _kill_r
+200033a8 g     O .bss	00000001 __lock___atexit_recursive_mutex
+00000400  w    F .text	00000004 CTIMER4_IRQHandler
+000050a4 g     F .text	0000004c _wcrtomb_r
+00000354  w    F .text	00000004 DMA0_DriverIRQHandler
+00001860 g     F .text	00000034 vRestoreContextOfFirstTask
+00000354  w    F .text	00000004 Reserved42_DriverIRQHandler
+0000642c g     F .text	00000024 __sseek
+0000547c g     F .text	00000110 __sinit
+00006518 g     F .text	000000b0 __swbuf_r
+0000035c  w    F .text	00000004 HardFault_Handler
+00001f4c g     F .text	00000062 vQueueWaitForMessageRestricted
+0000036c  w    F .text	00000004 WDT_BOD_IRQHandler
+000003b8  w    F .text	00000004 FLEXCOMM5_IRQHandler
+00004084 g     F .text	0000000c __malloc_unlock
+0000041c  w    F .text	00000004 Reserved60_IRQHandler
+00000404  w    F .text	00000004 OS_EVENT_IRQHandler
+000003c0  w    F .text	00000004 FLEXCOMM7_IRQHandler
+000016e8 g     F .text	0000002e SysTick_Handler
+00000414  w    F .text	00000004 SDIO_IRQHandler
+00005e6c g     F .text	000000f8 memmove
+0000038c  w    F .text	00000004 UTICK0_IRQHandler
+000018f0 g     F .text	00000064 PendSV_Handler
+00000358  w    F .text	00000004 NMI_Handler
+00006d5c g       .ARM	00000000 __exidx_end
+00000354  w    F .text	00000004 FLEXCOMM4_DriverIRQHandler
+20000848 g     O .data	00000004 __atexit_recursive_mutex
+00006d68 g       .fini_array	00000000 __etext
+00000418  w    F .text	00000004 Reserved59_IRQHandler
+20000a18 g     O .bss	00000004 pxCurrentTCB
+00000354  w    F .text	00000004 SEC_VIO_DriverIRQHandler
+000068b8 g     F .text	0000002c _fstat_r
+200033b8 g     O .bss	00000004 errno
+00000428  w    F .text	00000004 USB1_IRQHandler
+000018c4 g     F .text	00000016 ulSetInterruptMask
+200037c0 g       .heap	00000000 __heap_limit
+00002c30 g     F .text	0000001c vTaskInternalSetTimeOutState
+00000dd4 g     F .text	00000068 CLOCK_SetupExtClocking
+000036b0 g     F .text	0000000a BOARD_InitBootClocks
+000018a0 g     F .text	00000024 vStartFirstTask
+00000354  w    F .text	00000004 PIN_INT3_DriverIRQHandler
+0000181a g     F .text	00000042 xPortStartScheduler
+00000354  w    F .text	00000004 PIN_INT2_DriverIRQHandler
+00000880 g     F .text	000000ec memcpy
+00002a1a g     F .text	00000034 vTaskPlaceOnEventList
+000003d4  w    F .text	00000004 Reserved42_IRQHandler
+000009cc g     F .text	00000062 SDK_DelayAtLeastUs
+00005470 g     F .text	0000000c _cleanup_r
+00001634  w    F .text	00000044 vPortSetupTimerInterrupt
+00000354  w    F .text	00000004 Reserved56_DriverIRQHandler
+00000440  w    F .text	00000004 SEC_VIO_IRQHandler
+00006d5c g       .init_array	00000000 __DTOR_END__
+00000354  w    F .text	00000004 FLEXCOMM0_DriverIRQHandler
+00000560 g     F .text	00000000 .hidden __aeabi_uldivmod
+000010f2 g     F .text	0000005c POWER_SetVoltageForFreq
+0000361a g     F .text	00000096 vPortFree
+00000354  w    F .text	00000004 PIN_INT0_DriverIRQHandler
+20000000 g     O .data	00000004 SystemCoreClock
+000003c4  w    F .text	00000004 ADC0_IRQHandler
+000003c8  w    F .text	00000004 Reserved39_IRQHandler
+200009b8 g       .bss	00000000 __START_BSS
+00000354  w    F .text	00000004 CTIMER2_DriverIRQHandler
+00072000 g       .data	00000000 text_end
+00006970 g     F .text	00000010 _fstat
+00003988 g     F .text	0000003c __assert_func
+00000354  w    F .text	00000004 UsageFault_Handler
+000003b0  w    F .text	00000004 FLEXCOMM3_IRQHandler
+200033a4 g     O .bss	00000004 __malloc_top_pad
+000063c4 g     F .text	00000004 _getpid_r
+200037c0 g       .heap	00000000 __HeapLimit
+200009b8 g       .bss	00000000 __bss_start__
+00000410  w    F .text	00000004 Reserved57_IRQHandler
+00005cd0 g     F .text	00000008 _localeconv_r
+0000596c g     F .text	00000314 __sfvwrite_r
+00000590 g     F .text	000002ec .hidden __udivmoddi4
+00004090 g     F .text	00000024 _sbrk_r
+000003f4  w    F .text	00000004 PIN_INT6_IRQHandler
+00000354  w    F .text	00000004 DefaultISR
+00000e86 g     F .text	00000064 CLOCK_GetOsc32KFreq
+00000354  w    F .text	00000004 USB0_DriverIRQHandler
+00000438  w    F .text	00000004 SEC_GPIO_INT0_IRQ1_IRQHandler
+00006934 g     F .text	0000002c _read_r
+0000199c g     F .text	00000008 vListInitialiseItem
+000003ec  w    F .text	00000004 PIN_INT4_IRQHandler
+000067e8 g     F .text	000000ce _fclose_r
+00000354  w    F .text	00000004 CASER_DriverIRQHandler
+00001c80 g     F .text	00000196 xQueueReceive
+00000424  w    F .text	00000004 USB1_PHY_IRQHandler
+200009d8 g     O .bss	00000040 xQueueRegistry
+2000339c g     O .bss	00000004 __malloc_max_sbrked_mem
+000036ba g     F .text	000000d4 BOARD_BootClockPLL150M
+000003cc  w    F .text	00000004 ACMP_IRQHandler
+000003bc  w    F .text	00000004 FLEXCOMM6_IRQHandler
+00000354  w    F .text	00000004 MRT0_DriverIRQHandler
+00000354  w    F .text	00000004 UTICK0_DriverIRQHandler
+00000e6a g     F .text	0000001c CLOCK_GetFro1MFreq
+00006d54 g       .ARM	00000000 __exidx_start
+00000354  w    F .text	00000004 Reserved41_DriverIRQHandler
+00006990 g     F .text	00000010 _isatty
+200033b4 g     O .bss	00000001 __lock___sinit_recursive_mutex
+00006b9c g     O .text	00000004 _global_impure_ptr
+00000354  w    F .text	00000004 PIN_INT4_DriverIRQHandler
+00000354  w    F .text	00000004 PIN_INT5_DriverIRQHandler
+00005f64 g     F .text	000003d8 _realloc_r
+00003a0c g     F .text	00000048 __libc_init_array
+00000354  w    F .text	00000004 FLEXCOMM2_DriverIRQHandler
+00000354  w    F .text	00000004 SEC_GPIO_INT0_IRQ0_DriverIRQHandler
+00000248 g     F .text	00000000 _mainCRTStartup
+00005670 g     F .text	00000064 _fputwc_r
+000052ac g     F .text	0000000e abort
+000069d0 g     F .text	00000020 _sbrk
+00003310 g     F .text	000001c0 pvPortMalloc
+00006d3c g     F .text	00000000 _init
+00001984 g     F .text	00000018 vListInitialise
+00000444  w    F .text	00000004 HASHCRYPT_IRQHandler
+00002a0e g     F .text	0000000c xTaskGetTickCount
+00000354  w    F .text	00000004 CTIMER4_DriverIRQHandler
+00000354  w    F .text	00000004 GINT1_DriverIRQHandler
+000055a4 g     F .text	00000028 __libc_fini_array
+000003e0  w    F .text	00000004 RTC_IRQHandler
+000002bc g     F .text	00000098 Reset_Handler
+000003a4  w    F .text	00000004 FLEXCOMM0_IRQHandler
+000003fc  w    F .text	00000004 CTIMER2_IRQHandler
+00000354  w    F .text	00000004 PIN_INT7_DriverIRQHandler
+00000420  w    F .text	00000004 Reserved61_IRQHandler
+200033ac g     O .bss	00000001 __lock___malloc_recursive_mutex
+00001716 g     F .text	00000024 vPortSVCHandler_C
+00002aca g     F .text	00000166 xTaskRemoveFromEventList
+00000354  w    F .text	00000004 Reserved55_DriverIRQHandler
+00000354  w    F .text	00000004 HASHCRYPT_DriverIRQHandler
+00000354  w    F .text	00000004 USB0_NEEDCLK_DriverIRQHandler
+000003a0  w    F .text	00000004 CTIMER3_IRQHandler
+200033c0 g       .heap	00000000 end
+00005ce4 g     F .text	00000002 __retarget_lock_release_recursive
+00000354  w    F .text	00000004 FLEXCOMM6_DriverIRQHandler
+00000354  w    F .text	00000004 CTIMER0_DriverIRQHandler
+200009b8 g       .data	00000000 __data_end__
+00000408  w    F .text	00000004 Reserved55_IRQHandler
+00006d5c g       .init_array	00000000 __CTOR_LIST__
+00000400 g       *ABS*	00000000 HEAP_SIZE
+00000354  w    F .text	00000004 CTIMER1_DriverIRQHandler
+00000398  w    F .text	00000004 CTIMER1_IRQHandler
+00000354  w    F .text	00000004 SecureFault_Handler
+0000558c g     F .text	0000000c __sfp_lock_acquire
+00005df4 g     F .text	00000078 memchr
+00002c4c g     F .text	000000c0 xTaskCheckForTimeOut
+000003f0  w    F .text	00000004 PIN_INT5_IRQHandler
+200033c0 g       .bss	00000000 __bss_end__
+00005774 g     F .text	000001f8 _free_r
+00005cc4 g     F .text	0000000c __locale_mb_cur_max
+00000354  w    F .text	00000004 PIN_INT6_DriverIRQHandler
+000050f0 g     F .text	00000016 _wcsrtombs_r
+000051f0 g     F .text	000000bc __call_exitprocs
+00000384  w    F .text	00000004 PIN_INT2_IRQHandler
+00000354  w    F .text	00000004 PQ_DriverIRQHandler
+000003ac  w    F .text	00000004 FLEXCOMM2_IRQHandler
+20000840 g     O .data	00000004 __malloc_sbrk_base
+00000248 g     F .text	00000000 _start
+000022ea g     F .text	00000010 vTaskSuspendAll
+00000450  w    F .text	00000004 PQ_IRQHandler
+000069b0 g     F .text	00000010 _lseek
+00000354  w    F .text	00000004 MAILBOX_DriverIRQHandler
+00000354  w    F .text	00000004 PIN_INT1_DriverIRQHandler
+00001a02 g     F .text	0000003e uxListRemove
+0000673c g     F .text	00000088 __register_exitproc
+00000240  w    F .text	00000000 _stack_init
+00000354  w    F .text	00000004 CTIMER3_DriverIRQHandler
+00000430  w    F .text	00000004 SEC_HYPERVISOR_CALL_IRQHandler
+000064b4 g     F .text	00000064 strncpy
+20003374 g     O .bss	00000028 __malloc_current_mallinfo
+00002656 g     F .text	000000bc vTaskSwitchContext
+000003f8  w    F .text	00000004 PIN_INT7_IRQHandler
+00002a4e g     F .text	0000007c vTaskPlaceOnEventListRestricted
+00000354  w    F .text	00000004 Reserved61_DriverIRQHandler
+000067c4 g     F .text	00000024 _close_r
+00000354  w    F .text	00000004 SEC_GPIO_INT0_IRQ1_DriverIRQHandler
+00000a3a g     F .text	0000009a CLOCK_AttachClk
+00000354  w    F .text	00000004 PUF_DriverIRQHandler
+00000e3c g     F .text	0000002e CLOCK_GetExtClkFreq
+00000380  w    F .text	00000004 PIN_INT1_IRQHandler
+00005cdc g     F .text	00000002 __retarget_lock_close_recursive
+00005108 g     F .text	000000d4 __swsetup_r
+0000087c  w    F .text	00000002 .hidden __aeabi_ldiv0
+20000438 g     O .data	00000408 __malloc_av_
+00000354  w    F .text	00000004 RTC_DriverIRQHandler
+00000354  w    F .text	00000004 FLEXCOMM3_DriverIRQHandler
+000063c8 g     F .text	00000022 __sread
+000003dc  w    F .text	00000004 USB0_IRQHandler
+00001678 g     F .text	00000018 vPortYield
+00004078 g     F .text	0000000c __malloc_lock
+00005414 g     F .text	0000005a _fflush_r
+000003d0  w    F .text	00000004 Reserved41_IRQHandler
+00005ce0 g     F .text	00000002 __retarget_lock_acquire_recursive
+00003fd4 g     F .text	000000a4 memset
+00000ad4 g     F .text	0000008a CLOCK_SetClkDiv
+00000354  w    F .text	00000004 MemManage_Handler
+00003884 g     F .text	00000098 main
+200033a0 g     O .bss	00000004 __malloc_max_total_mem
+00005cd8 g     F .text	00000002 __retarget_lock_init_recursive
+000003e8  w    F .text	00000004 MAILBOX_IRQHandler
+000019a4 g     F .text	0000005e vListInsert
+000037ae g     F .text	000000b6 BOARD_InitLEDsPins
+00001960 g     F .text	00000024 SVC_Handler
+00006450 g     F .text	00000008 __sclose
+00002e42 g     F .text	00000060 xTimerCreateTimerTask
+20000000 g       .data	00000000 __DATA_RAM
+00000354  w    F .text	00000004 USB1_DriverIRQHandler
+00003a54 g     F .text	00000580 _malloc_r
+000066f4 g     F .text	0000001c __ascii_wctomb
+00000354  w    F .text	00000004 Reserved60_DriverIRQHandler
+00000b5e g     F .text	0000009a CLOCK_SetupFROClocking
+000037a4 g     F .text	0000000a BOARD_InitBootPins
+200033c0 g       .heap	00000000 __end__
+00000354  w    F .text	00000004 DMA1_DriverIRQHandler
+00001b12 g     F .text	00000082 xQueueGenericCreate
+000056d4 g     F .text	000000a0 _malloc_trim_r
+000065c8 g     F .text	00000108 _wcsnrtombs_l
+00006d5c g       .init_array	00000000 __CTOR_END__
+0000037c  w    F .text	00000004 PIN_INT0_IRQHandler
+00006d5c g       .init_array	00000000 __DTOR_LIST__
+200033c0 g       .bss	00000000 __END_BSS
+0000096c  w    F .text	0000005e SystemInit
+00000370  w    F .text	00000004 DMA0_IRQHandler
+00006d48 g     F .text	00000000 _fini
+00000f9a g     F .text	00000158 CLOCK_SetPLL0Freq
+00000354  w    F .text	00000004 FLEXCOMM5_DriverIRQHandler
+000023f0 g     F .text	00000218 xTaskResumeAll
+00006af0 g     O .text	00000004 uxTopUsedPriority
+00002712 g     F .text	0000009e vTaskStartScheduler
+000052bc g     F .text	0000000c atexit
+000066d0 g     F .text	00000024 _wcsnrtombs_r
+00006710 g     F .text	0000002c _write_r
+000003e4  w    F .text	00000004 Reserved46_IRQHandler
+20033000 g       .stack	00000000 __StackTop
+2000000c g     O .data	00000004 _impure_ptr
+000052c8 g     F .text	0000014c __sflush_r
+00000458  w    F .text	00000004 FLEXCOMM8_IRQHandler
+000003d8  w    F .text	00000004 USB0_NEEDCLK_IRQHandler
+20033000 g       .noinit_rpmsg_sh_mem	00000000 __RPMSG_SH_MEM_START__
+00007720 g       *ABS*	00000000 __DATA_END
+00005dc8 g     F .text	0000002a __ascii_mbtowc
+00002d0c g     F .text	0000000e vTaskMissedYield
+00000448  w    F .text	00000004 CASER_IRQHandler
+00001e84 g     F .text	000000c8 vQueueAddToRegistry
+00000374  w    F .text	00000004 GINT0_IRQHandler
+0000044c  w    F .text	00000004 PUF_IRQHandler
+000027d4 g     F .text	0000023a xTaskIncrementTick
+000003b4  w    F .text	00000004 FLEXCOMM4_IRQHandler
+00000c02 g     F .text	000001d2 CLOCK_SetFLASHAccessCyclesForFreq
+000018da g     F .text	0000000e vClearInterruptMask
+00000354  w    F .text	00000004 ADC0_DriverIRQHandler
+20033000 g       *ABS*	00000000 __stack
+00001a40 g     F .text	000000d2 xQueueGenericReset
+000069f0 g     F .text	00000010 _write
+00000354  w    F .text	00000004 USB1_NEEDCLK_DriverIRQHandler
+00001594 g     F .text	0000008a GPIO_PinInit
+000009ca  w    F .text	00000002 SystemInitHook
+000055cc g     F .text	000000a4 __fputwc
+000003a8  w    F .text	00000004 FLEXCOMM1_IRQHandler
+00006d68 g       .fini_array	00000000 __DATA_ROM
+00001fae g     F .text	000000ae xTaskCreate
+20032800 g       *ABS*	00000000 __StackLimit
+0000043c  w    F .text	00000004 PLU_IRQHandler
+00000354  w    F .text	00000004 Reserved59_DriverIRQHandler
+000063ec g     F .text	0000003e __swrite
+00000354  w    F .text	00000004 FLEXCOMM7_DriverIRQHandler
+20000844 g     O .data	00000004 __malloc_trim_threshold
+0000379a g     F .text	0000000a BOARD_InitBootPeripherals
+000039c4 g     F .text	00000020 exit
+000039e4 g     F .text	00000028 fiprintf
+00004128 g     F .text	00000efc _vfiprintf_r
+00000354  w    F .text	00000004 SDIO_DriverIRQHandler
+00005c80 g     F .text	00000042 _fwalk_reent
+00000354  w    F .text	00000004 GINT0_DriverIRQHandler
+00000eec g     F .text	00000056 CLOCK_GetPLL0InClockRate
+000069a0 g     F .text	00000010 _kill
+00002608 g     F .text	0000004e vTaskDelay
+00000354  w    F .text	00000004 USB1_PHY_DriverIRQHandler
+00005598 g     F .text	0000000c __sfp_lock_release
+00000390  w    F .text	00000004 MRT0_IRQHandler
+00002d1a g     F .text	0000003c xTaskGetSchedulerState
+00006c38 g     O .text	00000101 _ctype_
+0000042c  w    F .text	00000004 USB1_NEEDCLK_IRQHandler
+000069c0 g     F .text	00000010 _read
+0000087c  w    F .text	00000002 .hidden __aeabi_idiv0
+00000354  w    F .text	00000004 ACMP_DriverIRQHandler
+00000388  w    F .text	00000004 PIN_INT3_IRQHandler
+00000354  w    F .text	00000004 FLEXCOMM8_DriverIRQHandler
+00000434  w    F .text	00000004 SEC_GPIO_INT0_IRQ0_IRQHandler
+00006a00 g     F .text	00000002 _exit
+00000354  w    F .text	00000004 Reserved57_DriverIRQHandler
+0000040c  w    F .text	00000004 Reserved56_IRQHandler
+00000354  w    F .text	00000004 BusFault_Handler
+00005ce8 g     F .text	000000e0 __smakebuf_r
+00006458 g     F .text	0000005c strlen
+0000175c g     F .text	0000008a pxPortInitialiseStack
+00000354  w    F .text	00000004 Reserved46_DriverIRQHandler
+00000394  w    F .text	00000004 CTIMER0_IRQHandler
+00001690 g     F .text	00000020 vPortEnterCritical
+00000354  w    F .text	00000004 SCT0_DriverIRQHandler
+00000354  w    F .text	00000004 WDT_BOD_DriverIRQHandler
+00000354  w    F .text	00000004 PLU_DriverIRQHandler
+00000378  w    F .text	00000004 GINT1_IRQHandler
+00000354  w    F .text	00000004 OS_EVENT_DriverIRQHandler
+2000084c g     O .data	0000016c __global_locale
+200033b0 g     O .bss	00000001 __lock___sfp_recursive_mutex
+00000454  w    F .text	00000004 DMA1_IRQHandler
+00006960 g     F .text	00000010 _close
+0000633c g     F .text	0000005c raise
+00000354  w    F .text	00000004 SEC_HYPERVISOR_CALL_DriverIRQHandler
+
+

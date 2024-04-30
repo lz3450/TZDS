@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     39220       1408      13948      54576 ../lpc_firmware/freertos_spi_sensor/output/freertos_spi_sensor.elf

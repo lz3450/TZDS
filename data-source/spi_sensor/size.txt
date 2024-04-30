@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     31500       1408       3300      36208 ../lpc_firmware/spi_sensor/output/spi_sensor.elf

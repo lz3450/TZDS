@@ -1,0 +1,7 @@
+ExitOnError 1
+Log jlink.log
+R
+H
+loadfile "%HEX_FILE_PATH%"
+R
+Exit

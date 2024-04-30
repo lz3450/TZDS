@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     29012       1408       3236      33656 ../lpc_firmware/i2c_sensor/output/i2c_sensor.elf

@@ -1,0 +1,6 @@
+build-native
+install-native
+pkg
+src/*
+!src/source.spc
+*.log

@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     37192       1408      13892      52492 ../lpc_firmware/freertos_i2c_sensor/output/freertos_i2c_sensor.elf

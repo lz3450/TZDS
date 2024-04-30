@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     34584       2812      13984      51380 ../lpc_firmware/freertos_pinlock/output/freertos_pinlock.elf

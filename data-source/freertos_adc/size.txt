@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     37324       1464      13876      52664 ../lpc_firmware/freertos_adc/output/freertos_adc.elf

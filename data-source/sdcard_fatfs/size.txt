@@ -1,0 +1,2 @@
+      text       data        bss      total filename
+     66156       2812       6568      75536 ../lpc_firmware/sdcard_fatfs/output/sdcard_fatfs.elf
