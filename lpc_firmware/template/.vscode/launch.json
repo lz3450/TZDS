@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "targetArchitecture": "arm",
+            "program": "${workspaceFolder}/output/${workspaceFolderBasename}.elf",
+            "debugServerPath": "${workspaceFolder}/../../jlink/JLinkGDBServerCLExe",
+            "debugServerArgs": "-select USB -device LPC55S69_M33_0 -if SWD -speed 4000 -LocalhostOnly",
+            "filterStderr": false,
+            "filterStdout": false,
+            "serverStarted": "Connected to target",
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/../../toolchain/bin/arm-none-eabi-gdb",
+            "miDebuggerServerAddress": "127.0.0.1:2331",
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

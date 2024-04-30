@@ -1,0 +1,13 @@
+.*.swp
+.idea
+/repos*/
+/build*/
+/install*/
+/venv/
+/*LLVMEmbeddedToolchainForArm*
+__pycache__
+*.egg-info
+
+# IDEs
+.vscode
+*.log
