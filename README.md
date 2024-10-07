@@ -201,6 +201,19 @@ make download
 **Terminal 2**:
 ```sh
 minicom -c on -b 115200 -D /dev/ttyACM0
+
+Welcome to minicom 2.8
+
+OPTIONS: I18n
+Port /dev/ttyACM0, 11:42:50
+
+Press CTRL-A Z for help on special keys
+
+Current temperature:  28.44
+Current temperature:  28.47
+Current temperature:  28.89
+Current temperature:  28.47
+...
 ```
 
 ### Experiment 4
