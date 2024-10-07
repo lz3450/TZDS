@@ -13,6 +13,8 @@ The following environments and hardware were used to perform the experiments for
 
 ## Artifact Evaluation
 
+**Note: After the AE evaluation, we will open-source our work through our gitlab public directory** [https://gitlab.com/s3lab-code/public](https://gitlab.com/s3lab-code/public)
+
 ### Connect to Remote Server
 
 ```sh
@@ -243,7 +245,6 @@ Press CTRL-A Z for help on special keys
 
 Memory access outside compartment detected!
 ```
-
 
 ## Run TZDS
 
