@@ -218,16 +218,23 @@ Current temperature:  28.47
 
 ### Experiment 4
 
-10 human-minutes + 10 compute-minutes
+20 human-minutes + 10 compute-minutes
 
 Over-approximation and Under approximation Rate
 
 This experiment aims to measure the accuracy of TZ-DATASHIELD’s static analysis tool by using well-understood C/C++ programs with known data slices.
 
 ```sh
-cd slicing_benchmark
-cd make
+cd slicing_benchmark/1
+./compile.sh
+ls
 ```
+You will see:
+```
+1.c   1.svf.bc       compile.sh     groundtruth.png  icfg.dot  vfg.dot
+1.ll  callgraph.dot  full_svfg.dot  groundtruth.svg  pag.dot   vfg_model.dot
+```
+Now you can compare the ground truth value flow graph (`groundtruth.svg`) and the generated value flow graph (`vfg_model.dot`, using a online tool, like https://dreampuf.github.io/).
 
 ### Experiment 5
 
