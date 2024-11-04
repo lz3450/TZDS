@@ -72,6 +72,8 @@ set -o pipefail
 # $EXECUTOR ./build-prerequisites.sh --skip_steps=howto,mingw32,package_sources | tee build-prerequisites.log && \
 # $EXECUTOR ./build-toolchain.sh --skip_steps=howto,manual,mingw32,mingw32-gdb-with-python,package_sources | tee build-toolchain.log
 
+echo "Installing dependencies..."
+./install-dependencies.sh > install-dependencies.log 2>&1
 echo "Installing sources..."
 ./install-sources.sh --skip_steps=mingw32 > install-sources.log 2>&1
 echo "Building prerequisites..."
