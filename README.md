@@ -244,8 +244,8 @@ This experiment aims to check if the SFI, CFI, and DFI mechanisms can block ille
 
 **Terminal 1**:
 ```sh
-cd attacks
-make a1 # a<attack number>
+cd attacks/1
+make download
 ```
 
 **Terminal 2**:
@@ -263,7 +263,7 @@ Port /dev/ttyACM0
 
 Press CTRL-A Z for help on special keys
 
-Memory access outside compartment detected!
+SFI violation detected!
 ```
 
 ## Run TZDS
