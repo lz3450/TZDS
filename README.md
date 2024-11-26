@@ -36,7 +36,7 @@ cd lpc_firmware
 cd adc
 # install/update template code (including sdk)
 ./install-template.sh
-make COMPILER=clang -j $(nproc)
+make clean && make COMPILER=clang -j $(nproc)
 make sdf
 cat output/comp.yaml
 ```
@@ -175,7 +175,7 @@ cd lpc_firmware
 cd adc
 # install/update template code (including sdk)
 ./install-template.sh
-make COMPILER=clang -j $(nproc)
+make clean && make COMPILER=clang -j $(nproc)
 ls -l output/adc.hex
 ```
 
@@ -187,18 +187,18 @@ Download Firmware Images to MCU
 
 Open a new terminal and navigate to one application directory, for example, `adc`. Then, open another terminal and run minicom-c on-b 115200-D /dev/ttyACM0 to open a serial terminal connected to the MCU.
 
-**Terminal 1**:
+#### Terminal 1:
 ```sh
 cd lpc_firmware
 # use adc as example
 cd adc
 # install/update template code (including sdk)
 ./install-template.sh
-make COMPILER=clang -j $(nproc)
+make clean && make COMPILER=clang -j $(nproc)
 make download
 ```
 
-**Terminal 2**:
+#### Terminal 2:
 ```sh
 minicom -c on -b 115200 -D /dev/ttyACM0
 
@@ -214,6 +214,38 @@ Current temperature:  28.47
 Current temperature:  28.89
 Current temperature:  28.47
 ...
+```
+
+---
+### Experiment 3 for `usbvcom` & `freertos_usbvcom`
+
+For `usbvcom` and `freertos_usbvcom`, a third terminal is necessary to get proper output of the application.
+
+#### Terminal 1:
+```sh
+cd lpc_firmware
+cd usbvcom
+## or
+# cd freertos_usbvcom
+./install-template.sh
+make clean && make COMPILER=clang -j $(nproc)
+make download
+```
+
+#### Terminal 2:
+```sh
+minicom -c on -b 115200 -D /dev/ttyACM0
+```
+
+#### Terminal 3:
+```sh
+ls /dev/ttyACM*
+# You will see:
+# /dev/ttyACM0  /dev/ttyACM1
+# Then, open another minicom to connect /dev/ttyACM1
+minicom -c on -b 115200 -D /dev/ttyACM1
+# In the minicom, type random characters, you can observe that the terminal echos the characters you type
+# In terminal 2, you can also see the typed characters
 ```
 
 ### Experiment 4
@@ -266,7 +298,66 @@ Press CTRL-A Z for help on special keys
 SFI violation detected!
 ```
 
-## Run TZDS
+## Evaluation Results Explanation
+
+### Table III, IV, V, VII and Figure 4, 5, 7
+
+The data presented in the above tables and figures are calculated through static measurement of the compiled firmware.
+The original data measured are placed under `data-source/<app_name>` and the preprocessed data are placed under `data/<app_name>`, which are precessed through Pyhton script `preprocess.py`.
+The following section explains the relation ship between tables/figures and the data measured.
+We mainly use Excel (`data-ndss2025.xlsx`) to calculate the results shown in the tables and figures.
+
+#### Table III
+
+- **# C & # Fn**: `lpc_firmware/<app_name>/output/comp.yaml`
+- **Size (KB)**: `data/<app_name>/function_sizes.json`
+
+#### Table IV
+
+- **#**: `lpc_firmware/<app_name>/output/comp.yaml`
+- **Size**: `data/<app_name>/object_sizes.json`
+
+#### Table V, Table VII, Figure 4 and Figure 7
+
+- `data/<app_name>/object_sizes.json`
+- `data/<app_name>/function_sizes.json`
+- `data/<app_name>/sizes.json`
+
+#### Figure 5
+
+- `data/<app_name>/rop_pos.json`
+- `data-source/<app_name>/rop.txt`
+
+### Table VI and Figure 6, 8
+
+The data presented in the above tables and figures are calculated by measuring the running application. We the Data Watchpoint and Trace (DWT) Cycle Counter in the MCU to measure the time used to run a piece of code:
+
+```c
+uint32_t start, end, cycles;
+start = DWT->CYCCNT; // Get start cycle count
+// Code to measure
+...
+end = DWT->CYCCNT
+cycles = end - start // Calculate elapsed cycles
+```
+
+The measured time are processed using Excel `data-ndss2025.xlsx`.
+
+#### Table VI and Figure 8
+
+- **SFI/CFI/DFI**:
+  - Measure the time used to execute `check()` function of the security monitor.
+  - Count the added instructions after instrumentation and calculate their execution time according to instruction type.
+
+- **Compartment Swith/Load/Unload**: Measure the time used by the  corresponding functions of the security monitor.
+
+#### Figure 6
+
+Some compartments are only used for the initialization of sensitive peripherals, and they are invoked just once during the lifetime of the application, while others are repeatedly executed within the application loop. So the runtime overhead are only measured and reported on those repeatedly called compartments. For application that requires human input (such as `pinlock` and `usbvcom`), the time wait for the input are exempted out.
+
+---
+
+## Run TZDS from scratch
 
 ### Build toolchain
 
