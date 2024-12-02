@@ -1,4 +1,8 @@
-# TZ-DataShield (TZDS)
+# TZ-DataShield (TZDS): Automated Data Protection for Embedded Systems via Data-Flow-Based Compartmentalization
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14257984.svg)](https://zenodo.org/records/14257984)
+
+*This repository contains code and supplementary materials for our research, "[TZ-DataShield: Automated Data Protection for Embedded Systems via Data-Flow-Based Compartmentalization]", published at the Network and Distributed System Security Symposium (NDSS) 2025.*
 
 TZ-DataShield is a novel LLVM compiler tool that enhances ARM TrustZone with data-based compartmentalization, offering robust protection for sensitive data against strong adversaries in MCU-based systems.
 
@@ -11,16 +15,53 @@ The following environments and hardware were used to perform the experiments for
 
 ![](pictures/BOARD-LPC55S69-EVK-PRODUCT-SHOT.webp)
 
-## Artifact Evaluation
+## Run TZDS from scratch
 
-**Note: After the AE evaluation, we will open-source our work through our gitlab public directory** [https://gitlab.com/s3lab-code/public](https://gitlab.com/s3lab-code/public)
+### Build toolchain
 
-### Connect to Remote Server
-
+#### Build gcc (>30 minutes)
 ```sh
-ssh -p 2222 tzds@107.211.15.224
+sudo apt update
+sudo apt install build-essential
+cd toolchain-gnu-bare-metal
+./build.sh
 ```
-(See password in *Artifact Appendix*)
+
+#### Build llvm and clang (>20 minutes)
+```sh
+sudo apt install clang ninja-build
+cd LLVM-embedded-toolchain-for-Arm
+./build.sh
+```
+
+#### Build SVF (>5 minutes)
+```sh
+cd SVF
+./build.sh
+```
+
+### Install toolchain
+```sh
+tar -xf toolchain-gnu-bare-metal/LLVMEmbeddedToolchainForArm-branch-14.tar.gz -C toolchain --strip-components=1
+tar -xf LLVM-embedded-toolchain-for-Arm/LLVMEmbeddedToolchainForArm-branch-14.tar.gz -C toolchain --strip-components=1
+```
+
+### Install JLink udev rule
+
+- Copy the file "99-jlink.rules" provided with this software package
+  in the /etc/udev/rules.d/ directory using this command:
+```sh
+sudo cp 99-jlink.rules /etc/udev/rules.d/
+```
+
+- Either restart your system or manually trigger the new rules with the following commands:
+```sh
+sudo udevadm control -R
+sudo udevadm trigger --action=remove --attr-match=idVendor=1366 --subsystem-match=usb
+sudo udevadm trigger --action=add    --attr-match=idVendor=1366 --subsystem-match=usb
+```
+
+## Artifact Evaluation
 
 ### Experiment 1
 
@@ -354,73 +395,3 @@ The measured time are processed using Excel `data-ndss2025.xlsx`.
 #### Figure 6
 
 Some compartments are only used for the initialization of sensitive peripherals, and they are invoked just once during the lifetime of the application, while others are repeatedly executed within the application loop. So the runtime overhead are only measured and reported on those repeatedly called compartments. For application that requires human input (such as `pinlock` and `usbvcom`), the time wait for the input are exempted out.
-
----
-
-## Run TZDS from scratch
-
-### Build toolchain
-
-#### Build gcc (>30 minutes)
-```sh
-sudo apt update
-sudo apt install build-essential
-cd toolchain-gnu-bare-metal
-./build.sh
-```
-
-#### Build llvm and clang (>20 minutes)
-```sh
-sudo apt install clang ninja-build
-cd LLVM-embedded-toolchain-for-Arm
-./build.sh
-```
-
-#### Build SVF (>5 minutes)
-```sh
-cd SVF
-./build.sh
-```
-
-### Install toolchain
-```sh
-tar -xf toolchain-gnu-bare-metal/LLVMEmbeddedToolchainForArm-branch-14.tar.gz -C toolchain --strip-components=1
-tar -xf LLVM-embedded-toolchain-for-Arm/LLVMEmbeddedToolchainForArm-branch-14.tar.gz -C toolchain --strip-components=1
-```
-
-### Install JLink udev rule
-
-- Copy the file "99-jlink.rules" provided with this software package
-  in the /etc/udev/rules.d/ directory using this command:
-```sh
-sudo cp 99-jlink.rules /etc/udev/rules.d/
-```
-
-- Either restart your system or manually trigger the new rules with the following commands:
-```sh
-sudo udevadm control -R
-sudo udevadm trigger --action=remove --attr-match=idVendor=1366 --subsystem-match=usb
-sudo udevadm trigger --action=add    --attr-match=idVendor=1366 --subsystem-match=usb
-```
-
-### Build firmware
-
-- Connect the debug usb port of development board
-```sh
-cd lpc_firmware
-# use i2c_sensor as example
-cd i2c_sensor
-# install/update template code (including sdk) from template project
-./install-template.sh
-make COMPILER=clang -j $(nproc)
-```
-
-- This command will generate the analysis results and and firmware:
-    - original firmware
-    - normal world firmware
-    - secure world firmware
-    - analysis results
-
-Note that the normal world firmware and secure world firmware should be programed to the MCU together to work.
-
-Sample data generate for compartmentalization can be find in `data-source` in this repo.
